@@ -3,53 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 1 java script assighnment</title>
+    <title>day 2 assighnment</title>
 </head>
 <body>
-    <!-- Question no 1 What are the different data types present in Java script?
+    <!-- 1. What are the differences between var, let and const?
+Ans. The main difference between Var, Let, and Const in JavaScript lies in their scope and mutability.
 
-    Ans- These are 8 Data types in JS
+-Var is function-scoped and can be both re-declared and updated, making it the more flexible, yet potentially riskier option from older JavaScript standards.
 
-    1 string 
-    2 Number 
-    3 Boolean 
-    4 Undefined 
-    5 Bigint
-    6symbol 
-    7 Null 
-    8 object.
+-In contrast, Let, introduced in ES6, is block-scoped and can only be updated, not re-declared, offering a middle ground between flexibility and predictability. 
 
-    Question no 2 What are the Java script Engines?
+-Const, also an ES6 addition, is block-scoped like Let but cannot be updated or re-declared, making it the strictest option for variable declarations, ideal for values that should remain constant throughout the code
 
-    1  V8 (Chrome, Node.js) : Developed by Google, V8 is a high-performance that is used in chrome.
+2. Difference between undefined vs not defined vs NaN?
 
-    2  Spider Monkey (Firefox):- It is used by Mozilla firefox. It is the First Javascript engine ever Created
-
-    3 Javascript (Safari) - It is also Known as Nitro, ased by safari browser used developed by apple
-
-    4  chakra (Microsoft Edge) - chakra was the original Javascript engin used by Microsoft brower, Howvever, Edge has switched to V8 engine.
-
+Ans.Undefined : undefined is a global variable that JavaScript creates at run time. JavaScript assigns undefined to any variable that has been declared but not initialized or defined. In other words, in a case where no value has been explicitly assigned to the variable, JavaScript calls it undefined.
     
-    Question no 3 Explain ECMA in JS?
-
-    Ans: (ECMA) European Computer Manufacture Association is a scripting language specifition that Javascript Follows. It define the core feature and Functionlities of Javascript. EMA Strandards are suguhanly updated. with new versions in troducing entha enhacements and feature. For Examplet ECMAScript 6 (ES6), released in 2015.
- 
-    Question no 4 Why we use JavaScript ?
-
-    Ans! We use Javascript because it help us to create interactive and dynamic user interface. Its versatility extends in both Front-end and Back-end deve- lopment and it's also supported by a large and active community.
-
-
-    Question no 5 What is Java Script ? Exblain the history of Java Script.
-
-    Ans- Javascript is a high level programming Ianguage Known for itt's use in web development. It is an important Importent part of building interactive ond dynamic content web application. on
-
-    Javascript is created by Brendan Eich while working at Netscabe Communication Corporation in 1995. It was known as Mocha, bet later senamd to Live script and Java script.
-
+    Not defined : A not defined is a variable that is not declared at a given point of time with declaration keyword like var, let, or const.
     
-    Question no 6 
-What is DOM is JS?
+    NaN : As the name implies, it is used to denote that the value of an object is not a number. There are many ways that you can generate this error, one being invalid math opertaions such as 0/0 or sqrt(-1) .
 
-    Javascript's Document object Model (Dom) represents web pages as object trees, enabling dynamic manipulation of content and interact Interaction. It allows Javascript to acess, modify, and respond to user actions, creating responsive. and interactive web application. -->
+3. What is difference between null and undefined and where to use what?
+
+Ans.Null - Null represents an empty value and carry no meaningful information.
+   
+    Undefined - Undefined represents any value that has not been defined anywhere in the program.If any variable or operation isn't able to produce a meaningful value, it returns undefined
+    
+    When we define a variable to undefined then we are trying to convey that the variable does not exist . When we define a variable to null then we are trying to convey that the variable is empty.
+
+4.What is execution context?
+
+Ans.When the JavaScript engine scans a script file, it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
+    During the context runtime, the parser parses the source code and allocates memory for the variables and functions. The source code is generated and gets executed.
+
+5. What is use of prompt in JavaScript? 
+
+Ans.The prompt() method in JavaScript is used to display a prompt box that prompts the user for the input. It is generally used to take the input from the user before entering the page. It can be written without using the window prefix. When the prompt box pops up, we have to click "OK" or "Cancel" to proceed.
+    The box is displayed using the prompt() method, which takes two arguments: The first argument is the label which displays in the text box, and the second argument is the default string, which displays in the textbox. 
+
+6. Why JavaScript is Dyanmic Language?
+
+Ans. JavaScript is called a dynamic language because it doesn't just have a few dynamic aspects, pretty much everything is dynamic.
+All variables are dynamic (both in type and existance), and even the code is dynamic. You can create new varia -->
+
+
 
 
 </body>
