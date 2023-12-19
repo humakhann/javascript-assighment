@@ -3,49 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> day 3 assighnment</title>
+    <title> day 4 assighnment</title>
 </head>
 <body>
+
+<!-- QUES1-Create the Example for Logical Operators ? -->
+ANS-Logical operators help you set up conditions for access:
+1-AND operator (&&): Player's age must be greater than 18 AND they must have a premium membership.
+age = 19
+premium_membership = True
+
+if age > 18 and premium_membership:
+    print("You can access the game!")
+else:
+    print("Sorry, you cannot access the game.")
+
+If the age is 20 and the player has a premium membership, they get access. Otherwise, they're denied access.
+
+2-OR operator (||): Player can access if they are either a premium member or if they have a special pass.
+premium_membership = False
+special_pass = True
+
+if premium_membership or special_pass:
+    print("You can access the game!")
+else:
+    print("Sorry, you cannot access the game.")
+
+    If the player has a premium membership OR a special pass, they get access.
+
+
+<!-- QUES2-Difference between “ == “ and “ === “ operators.? -->
+ANS-
+1: == (Double equals): This checks if two things are equal in value, but it might perform type coercion,
+ meaning it can convert the operands to the same type before making the comparison.
+
+For example:
+
+5 == '5' would return true because it converts the string '5' to a number and compares their values.
+
+2: === (Triple equals): This also checks if two things are equal in value, but it's stricter; it doesn’t
+ perform type coercion. It checks both the value and the type of the operands.
+
+For example:
+
+5 === '5' would return false because it doesnt convert types; it directly compares a number to a string
+ and sees they're different types, so it returns false.
+In simple terms, == checks if values are the same after potential type conversions, while === checks for
+ both value and type without doing any conversions.
+
+<!-- QUES3-How many operators do we have in JS ? -->
+ANS-
+1-Arithmetic Operators: Perform mathematical calculations like addition, subtraction, multiplication, division, etc. (+, -, *, /, %, ++, --)
+
+2-Assignment Operators: Assign values to variables (=, +=, -=, *=, /=, %=)
+
+3-Comparison Operators: Compare values and return true or false (==, ===, !=, !==, >, <, >=, <=)
+
+4-Logical Operators: Perform logical operations (&&, ||, !)
+
+5-Bitwise Operators: Perform operations on binary representations of numbers (&, |, ^, ~, <<, >>, >>>)
+
+6-Unary Operators: Operate on a single operand (+, -, ++, --, !)
+
+7-Conditional (Ternary) Operator: A shorthand for an if-else statement (condition ? exprIfTrue : exprIfFalse)
+
+8-String Operators: Concatenate strings (+)
+
+These operators allow you to perform different tasks like math, comparisons, logical operations, and more within JavaScript code.
+
+<!-- QUES4-What is use of parseInt in js? -->
+ANS-parseInt in JavaScript is a function that takes a string as input and tries to convert it into an integer (a whole number).
+
+In simple words, it helps you change a string that looks like a number into an actual number that you can use for calculations or comparisons.
+FOR ex-
+let numberString = "123";
+let number = parseInt(numberString);
+console.log(number); // This will output: 123
+
+It takes a string like "123" and turns it into the number 123. This is useful when you have user inputs
+ or data from sources where numbers are represented as strings, and you need to use them as actual
+ numbers in your JavaScript code.
+
+<!-- Ques5-Take input from user and find the odd and even number.? -->
+ANS-JavaScript that takes input from the user and determines if it's an odd or even number
+
+// Take input from the user using prompt
+let userInput = prompt("Enter a number:");
+
+// Convert the user input from string to a number
+let number = parseInt(userInput);
+
+// Check if the number is valid and not NaN
+if (!isNaN(number)) {
+    if (number % 2 === 0) {
+        console.log(number + " is an even number.");
+    } else {
+        console.log(number + " is an odd number.");
+    }
+} else {
+    console.log("Invalid input. Please enter a valid number.");
+}
+
+
+This script uses prompt to take input from the user, then converts the input to a number using parseInt.
+ It checks if the number is valid and then uses the modulo operator % to determine if the number is even
+  or odd. If the remainder of dividing the number by 2 is 0, it's even; otherwise, it's odd.
+
     
-    Ques1:Write the Code for all Data types.
-
-    Ans:// Numbers:
-        let length = 15;
-        let weight = 6.5;
-    
-        // Strings:
-        let color = "levender";
-        let lastName = "khan";
-    
-        // Booleans
-        let a = true;
-        let b = false;
-    
-        // Object:
-        const person = {firstName:"huma", lastName:"khan"}
-
-    Ques2:What are the uses of JavaScript Operators?
-
-    Ans:Operators are used to assign values, compare values, perform arithmetic operations, and more.
-
-    Ques3:Explain the Assignment Operator.
-
-    Ans:The assignment operator = assigns the value of its right-hand operand to a variable, a property, or an indexer element given by its left-hand operand.
-
-    Ques4:Explain the all Arithmetic Operators.
-
-    Ans:The arithmetic operators perform addition, subtraction, multiplication, division, exponentiation, and modulus operations.
-
-    Ques5:What are the Binary Operators in js.
-
-    Ans:Binary operators in JS require two operands for operation. If one or more than two operands are provided, such operators result in a syntax error.
-
-    Ques6:Explain the Pre-Increment and Post Increment in js
-
-    Ans:Pre-increment means first increment then use and post-increment means first use and then increment
-
-
-
-
 </body>
 </html>
