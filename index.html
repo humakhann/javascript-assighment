@@ -3,145 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day 5 assighnment</title>
+    <title> day 4 assighnment</title>
 </head>
 <body>
-    <script>
 
-//     <!-- Q1. Add two Numbers
-// You are provided with two numbers A and B. Your task is to add these two numbers.
-// Note: You have to complete AddTwoNumbers function. No need to take any input. -->
+<!-- QUES1-Create the Example for Logical Operators ? -->
+ANS-Logical operators help you set up conditions for access:
+1-AND operator (&&): Player's age must be greater than 18 AND they must have a premium membership.
+age = 19
+premium_membership = True
 
-// let a = 12;
-// let b = 4;
-// let result = a+b;
+if age > 18 and premium_membership:
+    print("You can access the game!")
+else:
+    print("Sorry, you cannot access the game.")
 
-//  console.log("The sum of " + a + " and " + b + " is: " + result );
+If the age is 20 and the player has a premium membership, they get access. Otherwise, they're denied access.
 
-// Find if the conditions are obeyed or not?
-// You are given two number first as A� and second as B� and check if both conditions
-// (A<10�<10 and A>B�>�) are satisfied or not with the help of operators.
-// Note: You have to complete Is_Valid function. No need to take any input.
+2-OR operator (||): Player can access if they are either a premium member or if they have a special pass.
+premium_membership = False
+special_pass = True
 
-// let  a = 5;
-// let b = 7;
+if premium_membership or special_pass:
+    print("You can access the game!")
+else:
+    print("Sorry, you cannot access the game.")
 
-// var condi1 = a < 10 && 10 < b;
-//     var condi2 = a > b;
+    If the player has a premium membership OR a special pass, they get access.
 
- 
-//     if (condi1 && condi2) {
-//         console.log("Both are same");
-//     } else {
-//         console.log("not same");
-//     }
 
-// Q3.Check the conditions
-// You are given two numbers A�and B�. You need to do the following checks:
-// 1. if both are divisible by 10 console true.
-// 2. if both are not divisible by 10 console false.
-// 3. if one of them only is divisible by 10 console true.
-// Use operator to do this.
-// Note: You have to complete Check function. No need to take any input.
+<!-- QUES2-Difference between “ == “ and “ === “ operators.? -->
+ANS-
+1: == (Double equals): This checks if two things are equal in value, but it might perform type coercion,
+ meaning it can convert the operands to the same type before making the comparison.
 
-// function Check(){
-// let a = 30;
-//     let b  = 80;
+For example:
+
+5 == '5' would return true because it converts the string '5' to a number and compares their values.
+
+2: === (Triple equals): This also checks if two things are equal in value, but it's stricter; it doesn’t
+ perform type coercion. It checks both the value and the type of the operands.
+
+For example:
+
+5 === '5' would return false because it doesnt convert types; it directly compares a number to a string
+ and sees they're different types, so it returns false.
+In simple terms, == checks if values are the same after potential type conversions, while === checks for
+ both value and type without doing any conversions.
+
+<!-- QUES3-How many operators do we have in JS ? -->
+ANS-
+1-Arithmetic Operators: Perform mathematical calculations like addition, subtraction, multiplication, division, etc. (+, -, *, /, %, ++, --)
+
+2-Assignment Operators: Assign values to variables (=, +=, -=, *=, /=, %=)
+
+3-Comparison Operators: Compare values and return true or false (==, ===, !=, !==, >, <, >=, <=)
+
+4-Logical Operators: Perform logical operations (&&, ||, !)
+
+5-Bitwise Operators: Perform operations on binary representations of numbers (&, |, ^, ~, <<, >>, >>>)
+
+6-Unary Operators: Operate on a single operand (+, -, ++, --, !)
+
+7-Conditional (Ternary) Operator: A shorthand for an if-else statement (condition ? exprIfTrue : exprIfFalse)
+
+8-String Operators: Concatenate strings (+)
+
+These operators allow you to perform different tasks like math, comparisons, logical operations, and more within JavaScript code.
+
+<!-- QUES4-What is use of parseInt in js? -->
+ANS-parseInt in JavaScript is a function that takes a string as input and tries to convert it into an integer (a whole number).
+
+In simple words, it helps you change a string that looks like a number into an actual number that you can use for calculations or comparisons.
+FOR ex-
+let numberString = "123";
+let number = parseInt(numberString);
+console.log(number); // This will output: 123
+
+It takes a string like "123" and turns it into the number 123. This is useful when you have user inputs
+ or data from sources where numbers are represented as strings, and you need to use them as actual
+ numbers in your JavaScript code.
+
+<!-- Ques5-Take input from user and find the odd and even number.? -->
+ANS-JavaScript that takes input from the user and determines if it's an odd or even number
+
+// Take input from the user using prompt
+let userInput = prompt("Enter a number:");
+
+// Convert the user input from string to a number
+let number = parseInt(userInput);
+
+// Check if the number is valid and not NaN
+if (!isNaN(number)) {
+    if (number % 2 === 0) {
+        console.log(number + " is an even number.");
+    } else {
+        console.log(number + " is an odd number.");
+    }
+} else {
+    console.log("Invalid input. Please enter a valid number.");
+}
+
+
+This script uses prompt to take input from the user, then converts the input to a number using parseInt.
+ It checks if the number is valid and then uses the modulo operator % to determine if the number is even
+  or odd. If the remainder of dividing the number by 2 is 0, it's even; otherwise, it's odd.
 
     
-//     var condition1 = a % 10 === 0 && b % 10 === 0;  
-//     var condition2 = a % 10 !== 0 && b  % 10 !== 0; 
-//     var condition3 = (a % 10 === 0 && b % 10 !== 0) || (a % 10 !== 0 && b % 10 === 0);  
-
-  
-//     console.log(" 1:", condition1);
-//     console.log(" 2:", condition2);
-//     console.log(" 3:", condition3);
-// }
-
-// Check();
-
-// Q4.Find the first digit of a 4 digit number
-// You are provided a four digit number N only. Your task is to print out the first digit of that
-// number.
-// Note: You have to complete First_Digit function. No need to take any input.
-
-
-// function First_Digit() {
-   
-//     let a = 1274.8;
-
- 
-//     var firstDigit = Math.floor(a / 1000);
-
-   
-//     console.log("The first digit of", a, "is:", firstDigit);
-// }
-
-
-// First_Digit();
-
-// Q5.Find the last digit of a 4 digit number
-// You are provided a four digit number N only. Your task is to print out the last digit of that
-// number.
-// Note: You have to complete Last_Digit function. No need to take any input.
-
-// function Last_Digit() {
-
-//     let a = 1234;
-
-
-//     var lastDigit = a % 10;
-
-  
-//     console.log("The last digit of", a, "is:", lastDigit);
-// }
-
-
-// Last_Digit();
-
-// Q6.Find the remainder
-// You are provided with two numbers A�and B�where A�as divisor and B�as dividend.Your
-// task is find the remainder.
-// Note: You have to complete Find_the_remainder function. No need to take any input.
-
-// function Find_the_remainder() {
-  
-// let  A = 9;  
-// let B = 24; 
-
-    
-//     var remainder = B % A;
-
-
-//     console.log("The remainder when", B, "is divided by", A, "is:", remainder);
-// }
-
-
-// Find_the_remainder();
-
-
-// Q7.Multiply two Numbers
-// You are provided with two numbers A�and B�. Your task is to multiply these two numbers.
-// Note: You have to complete Multiply_two_number function. No need to take any input.
-
-// function Multiply two number() {
-  
-//     var A = 5;
-//     var B = 10;
-
-
-//     var result = A * B;
-
-  
-//     console.log("The product of", A, "and", B, "is:", result);
-// }
-
-// Multiply_two_number();
-
-
-
-
-</script>
 </body>
 </html>
